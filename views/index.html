@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang=ja>
+<head>
+  <meta charset="UTF-8">
+  <title>サンプルパッケージ</title>
+</head>
+ <body>
+  <p>
+  {% for i in range(list|length) %}
+  {{ list[i] }}{% if i < list|length - 1 %}、{% endif %}
+  {% endfor %}
+  </p>
+  <p>
+  {% for tmp in list %}
+  {{ tmp }}{% if not loop.last %}、{% endif %}
+  {% endfor %}
+  </p>
+ </body>
+</html>
